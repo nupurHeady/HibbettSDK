@@ -1,0 +1,51 @@
+{
+  "originHash" : "1204ad52b57377be83939ef97fd38001f6363a5e70d4d882299b6f099fd544a1",
+  "pins" : [
+    {
+      "identity" : "caishen",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/makeitheady/Caishen.git",
+      "state" : {
+        "branch" : "convert-spm",
+        "revision" : "c86ce20f591eccc6315fb77d5aebe4643d93e044"
+      }
+    },
+    {
+      "identity" : "genericvalidator",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/makeitheady/GenericValidator.git",
+      "state" : {
+        "branch" : "create-spm",
+        "revision" : "ef048ed9372a5916683f0659cc68c88cff96efc2"
+      }
+    },
+    {
+      "identity" : "optik",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/makeitheady/Optik.git",
+      "state" : {
+        "branch" : "create-spm",
+        "revision" : "a4ddfeccced4111a53f62b7d799f7a5979d10a34"
+      }
+    },
+    {
+      "identity" : "pcf-swift",
+      "kind" : "remoteSourceControl",
+      "location" : "https://nupur5@bitbucket.org/headyio/pcf-swift.git",
+      "state" : {
+        "branch" : "create-spm",
+        "revision" : "dd74c6f711874e6391ff438d4aa66559ee18716d"
+      }
+    },
+    {
+      "identity" : "svprogresshud",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/SVProgressHUD/SVProgressHUD",
+      "state" : {
+        "revision" : "c33f7c775ba7feea6047a1fc3257f2e5863b44f7",
+        "version" : "2.3.1"
+      }
+    }
+  ],
+  "version" : 3
+}
