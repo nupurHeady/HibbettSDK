@@ -5,6 +5,7 @@
 //  Created by Thibault Klein on 4/20/17.
 //  Copyright © 2017 Prolific Interactive. All rights reserved.
 //
+import UIKit
 
 /// Notifier protocol for state event updates.
 /// Use to notifiy when the user performs an action (event) related to a state.

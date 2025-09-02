@@ -7,6 +7,7 @@
 //
 
 import PCFSwift
+import CoreFeature
 
 /// OAuth Session manager
 public final class OAuthSessionManager: SessionManager {
@@ -44,8 +45,8 @@ public final class OAuthSessionManager: SessionManager {
         }
     }
     
-    static private var isRetrievingSessionIdentifier = false
-    static private var retrieveSessionIdentifierCompletions = [(Swift.Error?) -> Void]()
+    static nonisolated(unsafe) private var isRetrievingSessionIdentifier = false
+    static nonisolated(unsafe) private var retrieveSessionIdentifierCompletions = [(Swift.Error?) -> Void]()
     
     // MARK: - Init
     

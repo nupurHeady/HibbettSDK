@@ -8,6 +8,7 @@
 
 import Foundation
 import PCFSwift
+import CoreFeature
 
 /// Persistence client utilizing UserDefaults.
 public struct UserDefaultsPersistenceClient: Persistable {

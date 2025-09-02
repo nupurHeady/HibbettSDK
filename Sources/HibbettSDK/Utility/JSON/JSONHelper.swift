@@ -15,7 +15,7 @@ public typealias JSON = [String: Any]
 /// - jsonFileNotFound: The JSON file could not be found.
 /// - jsonDeserializationFailed: The JSON failed to deserialize.
 /// - jsonFormatInvalid: The JSON format is invalid.
-public enum JSONError: Swift.Error {
+public enum JSONError: Swift.Error, @unchecked Sendable {
 
     /// Error for the case that a file was not found.
     case jsonFileNotFound(filePath: String)

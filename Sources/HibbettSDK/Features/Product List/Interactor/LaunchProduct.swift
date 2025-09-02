@@ -5,11 +5,13 @@
 //  Created by Thibault Klein on 6/5/17.
 //  Copyright © 2017 Prolific Interactive. All rights reserved.
 //
-
+import Foundation
 import PCFSwift
+import CoreFeature
+import UIKit
 
 /// Launch product model.
-public struct LaunchProduct: PCFSwift.Product {
+public struct LaunchProduct: CoreFeature.Product {
     
     public typealias SkuType = PCFSku
     public typealias PersonalizationOptionType = PCFPersonalizationOption
@@ -66,7 +68,7 @@ public struct LaunchProduct: PCFSwift.Product {
     public let closeDate: Date?
     
     /// Date formatter.
-    public static var dateFormatter: DateFormatter = HibbettDateFormatter.shared
+    nonisolated(unsafe) public static var dateFormatter: DateFormatter = HibbettDateFormatter.shared
 
     public let categoryIds: [String]? = nil
 

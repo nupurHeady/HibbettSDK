@@ -6,8 +6,9 @@
 //  Copyright © 2017 Prolific Interactive. All rights reserved.
 //
 
-import Foundation
+import UIKit
 import PCFSwift
+import CoreFeature
 
 /// Factory functions for creating new HTTPRequest instances from existing HTTPRequests.
 public extension HTTPRequest {
@@ -24,7 +25,7 @@ public extension HTTPRequest {
     /// Adds app version heaer to HTTP request.
     ///
     /// - Returns: HTTP request.
-    func withDeviceInfo() -> HTTPRequest {
+    @MainActor func withDeviceInfo() -> HTTPRequest {
         let deviceInfoHeaders = ["version": UIApplication.shared.appVersion(),
                                  "platform": "ios"]
         return self.withAdditionalHeaders(deviceInfoHeaders)

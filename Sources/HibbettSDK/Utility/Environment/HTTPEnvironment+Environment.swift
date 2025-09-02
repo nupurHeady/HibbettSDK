@@ -8,6 +8,7 @@
 
 import Foundation
 import PCFSwift
+import CoreFeature
 
 ///// Extensions on PCF Environment model to support Hibbett Environment model.
 extension HTTPEnvironment {

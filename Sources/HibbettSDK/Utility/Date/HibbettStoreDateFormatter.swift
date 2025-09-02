@@ -13,7 +13,7 @@ public typealias TimeZoneIdentifierString = String
 // MARK: - HibbettStoreDateFormatter
 
 /// Date formatter encapsulating date format for all Store timings.
-public final class HibbettStoreDateFormatter: DateFormatter {
+public final class HibbettStoreDateFormatter: DateFormatter, @unchecked Sendable {
     // MARK: - Class properties
 
     /// Singleton instance.

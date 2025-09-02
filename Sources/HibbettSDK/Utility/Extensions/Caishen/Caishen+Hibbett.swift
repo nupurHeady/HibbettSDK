@@ -6,8 +6,8 @@
 //  Copyright © 2017 Prolific Interactive. All rights reserved.
 //
 
+import UIKit
 import Caishen
-import Foundation
 
 extension Caishen.Card {
     

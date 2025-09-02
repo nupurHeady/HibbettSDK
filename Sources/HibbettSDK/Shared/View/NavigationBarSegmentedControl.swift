@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import UIKit
 
 /** Custom UISegmentedControl that can fit full width in a navigation bar.
  

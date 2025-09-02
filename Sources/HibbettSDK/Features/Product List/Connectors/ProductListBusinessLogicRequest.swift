@@ -8,6 +8,7 @@
 
 import Foundation
 import PCFSwift
+import Wishlist
 
 /// Product list business logic request protocol.
 public protocol ProductListBusinessLogicRequest {

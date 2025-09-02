@@ -26,7 +26,7 @@ public protocol ActivityIndicating {
 
 extension ActivityIndicating {
 
-    public func activityIndicator() -> UIActivityIndicatorView {
+    @MainActor public func activityIndicator() -> UIActivityIndicatorView {
         return UIActivityIndicatorView()
     }
 

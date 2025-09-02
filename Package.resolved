@@ -1,6 +1,15 @@
 {
-  "originHash" : "1204ad52b57377be83939ef97fd38001f6363a5e70d4d882299b6f099fd544a1",
+  "originHash" : "f470259794b6c16ebfb3f6c2e802a42745a10898b3a2a2c13a9bcc9016ef6e59",
   "pins" : [
+    {
+      "identity" : "alamofire",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/Alamofire/Alamofire",
+      "state" : {
+        "revision" : "513364f870f6bfc468f9d2ff0a95caccc10044c5",
+        "version" : "5.10.2"
+      }
+    },
     {
       "identity" : "caishen",
       "kind" : "remoteSourceControl",
@@ -20,6 +29,15 @@
       }
     },
     {
+      "identity" : "keychainaccess",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/kishikawakatsumi/KeychainAccess",
+      "state" : {
+        "revision" : "84e546727d66f1adc5439debad16270d0fdd04e7",
+        "version" : "4.2.2"
+      }
+    },
+    {
       "identity" : "optik",
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/makeitheady/Optik.git",
@@ -31,10 +49,10 @@
     {
       "identity" : "pcf-swift",
       "kind" : "remoteSourceControl",
-      "location" : "https://nupur5@bitbucket.org/headyio/pcf-swift.git",
+      "location" : "https://github.com/makeitheady/pcf-swift.git",
       "state" : {
         "branch" : "create-spm",
-        "revision" : "dd74c6f711874e6391ff438d4aa66559ee18716d"
+        "revision" : "37c0b2706d5f0c44a6c3e957a77ea7aca9adbaa4"
       }
     },
     {

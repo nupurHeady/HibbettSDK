@@ -7,6 +7,7 @@
 //
 
 import PCFSwift
+import CoreFeature
 
 /// Launch product search result.
 public struct LaunchProductSearch: ProductSearch {

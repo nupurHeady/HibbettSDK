@@ -9,7 +9,7 @@
 import UIKit
 import SVProgressHUD
 
-extension UIView: ActivityIndicating {
+extension UIView: @preconcurrency ActivityIndicating {
 
     /// Shows activity indicator in view given a indicator color.
     ///

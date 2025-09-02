@@ -7,6 +7,7 @@
 //
 
 import PCFSwift
+import Wishlist
 
 /// Product list business logic response.
 public protocol ProductListBusinessLogicResponse: Errorable {

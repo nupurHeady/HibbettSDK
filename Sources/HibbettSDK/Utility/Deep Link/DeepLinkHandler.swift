@@ -6,7 +6,7 @@
 //  Copyright © 2017 Prolific Interactive. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
 /// Deep link handler protocol.
 public protocol DeepLinkHandler {

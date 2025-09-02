@@ -5,7 +5,7 @@
 //  Created by Harlan Kellaway on 6/7/17.
 //  Copyright © 2017 Prolific Interactive. All rights reserved.
 //
-
+import Foundation
 import PCFSwift
 
 /// OAuth session.
@@ -25,7 +25,7 @@ public final class OAuthSession: NSObject, NSCoding, Swift.Decodable {
     // MARK: - Class properties
     
     /// Date formatter.
-    static var dateFormatter: DateFormatter = HibbettDateFormatter.shared
+    static let dateFormatter: DateFormatter = HibbettDateFormatter.shared
 
     // MARK: - Properties
 

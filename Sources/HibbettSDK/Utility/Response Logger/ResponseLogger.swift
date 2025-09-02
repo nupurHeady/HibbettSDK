@@ -14,7 +14,7 @@ public final class ResponseLogger {
     // MARK: - Properties
 
     /// Shared instance.
-    public static let shared = ResponseLogger()
+    nonisolated(unsafe) public static let shared = ResponseLogger()
 
     // MARK: Private properties
 

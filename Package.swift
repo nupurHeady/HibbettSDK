@@ -11,15 +11,15 @@ let package = Package(
             name: "HibbettSDK",
             targets: ["HibbettSDK"]
         ),
+        .library(name: "Keys",
+                 targets: ["Keys"]),
     ],
     dependencies: [
-            .package(url: "https://nupur5@bitbucket.org/headyio/pcf-swift.git", branch: "create-spm"),
+            .package(url: "https://github.com/makeitheady/pcf-swift.git", branch: "create-spm"),
             .package(url: "https://github.com/SVProgressHUD/SVProgressHUD", .upToNextMajor(from: "2.3.1")),
             .package(url: "https://github.com/makeitheady/GenericValidator.git", branch:"create-spm"),
             .package(url: "https://github.com/makeitheady/Optik.git", branch: "create-spm"),
             .package(url: "https://github.com/makeitheady/Caishen.git", branch: "convert-spm"),
-            
-            
         ],
     targets: [
         .target(
@@ -30,7 +30,15 @@ let package = Package(
                            .product(name: "GenericValidator", package: "genericvalidator"),
                            .product(name: "Optik", package: "optik"),
                            .product(name: "Caishen", package: "caishen"),
+                           .product(name: "Core", package: "pcf-swift"),
+                           .product(name: "WishlistFeature", package: "pcf-swift"),
+                           "Keys"
                        ]
+        ),
+        .target(
+            name: "Keys",
+            path: "Sources/Keys",
+            publicHeadersPath: "include"
         ),
         .testTarget(
             name: "HibbettSDKTests",

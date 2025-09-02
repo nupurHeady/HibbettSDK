@@ -7,9 +7,10 @@
 //
 
 import PCFSwift
+import Wishlist
 
 /// Product view logic result protocol.
-public protocol ProductListViewLogicResult: class, ErrorDisplayable {
+public protocol ProductListViewLogicResult: AnyObject, ErrorDisplayable {
 
     associatedtype DisplayModel
     associatedtype WishlistModel: Wishlistable

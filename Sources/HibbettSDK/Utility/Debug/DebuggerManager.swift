@@ -7,6 +7,7 @@
 //
 
 import PCFSwift
+import CoreFeature
 
 /// Debugger manager protocol.
 public protocol DebuggerManager {

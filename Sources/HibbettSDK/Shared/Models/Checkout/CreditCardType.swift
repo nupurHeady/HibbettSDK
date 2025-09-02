@@ -108,5 +108,5 @@ public enum CreditCardType {
     // MARK: - Class functions
     
     /// All credit card types.
-    static let allValues = [CreditCardType.americanExpress, .discover, .masterCard, .visa]
+    nonisolated(unsafe) static let allValues = [CreditCardType.americanExpress, .discover, .masterCard, .visa]
 }
