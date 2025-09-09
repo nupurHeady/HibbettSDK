@@ -1,5 +1,5 @@
 {
-  "originHash" : "f470259794b6c16ebfb3f6c2e802a42745a10898b3a2a2c13a9bcc9016ef6e59",
+  "originHash" : "354fd9541c88ae957ae9ec928055351f224d9ae0e3dea7b2a0dbb9c6e17d8ba8",
   "pins" : [
     {
       "identity" : "alamofire",
@@ -52,7 +52,7 @@
       "location" : "https://github.com/makeitheady/pcf-swift.git",
       "state" : {
         "branch" : "create-spm",
-        "revision" : "37c0b2706d5f0c44a6c3e957a77ea7aca9adbaa4"
+        "revision" : "12343ed04495096b6b1b5895c6cd806f08ec8e67"
       }
     },
     {

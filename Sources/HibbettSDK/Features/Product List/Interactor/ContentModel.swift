@@ -7,7 +7,7 @@
 //
 
 import PCFSwift
-
+import UIKit
 
 /// Launch product content.
 public struct ProductContent: Codable {

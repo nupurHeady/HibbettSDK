@@ -8,6 +8,7 @@
 
 import PCFSwift
 import CoreFeature
+import UIKit
 
 /// OAuth Session manager
 public final class OAuthSessionManager: SessionManager {

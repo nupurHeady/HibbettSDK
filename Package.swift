@@ -10,9 +10,7 @@ let package = Package(
         .library(
             name: "HibbettSDK",
             targets: ["HibbettSDK"]
-        ),
-        .library(name: "Keys",
-                 targets: ["Keys"]),
+        )
     ],
     dependencies: [
             .package(url: "https://github.com/makeitheady/pcf-swift.git", branch: "create-spm"),
@@ -31,14 +29,8 @@ let package = Package(
                            .product(name: "Optik", package: "optik"),
                            .product(name: "Caishen", package: "caishen"),
                            .product(name: "Core", package: "pcf-swift"),
-                           .product(name: "WishlistFeature", package: "pcf-swift"),
-                           "Keys"
+                           .product(name: "WishlistFeature", package: "pcf-swift")
                        ]
-        ),
-        .target(
-            name: "Keys",
-            path: "Sources/Keys",
-            publicHeadersPath: "include"
         ),
         .testTarget(
             name: "HibbettSDKTests",
