@@ -9,7 +9,7 @@
 import XCTest
 @testable import HibbettSDK
 
-final class UIScrollViewScrollDirectionTests: XCTestCase {
+@MainActor final class UIScrollViewScrollDirectionTests: XCTestCase {
 
     func testScrollView_whenScrollDirectionIsUp() {
         // Given

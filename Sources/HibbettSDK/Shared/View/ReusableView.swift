@@ -7,7 +7,7 @@
 //
 
 /// Defines a reusable table view or collection view cell.
-public protocol ReusableView: class {
+public protocol ReusableView: AnyObject {
 
     /// Default reuse identifier is set with the class name.
     static var reuseIdentifier: String { get }

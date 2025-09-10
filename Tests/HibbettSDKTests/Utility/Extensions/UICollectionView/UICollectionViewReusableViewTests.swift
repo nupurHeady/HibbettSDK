@@ -9,7 +9,7 @@
 import XCTest
 @testable import HibbettSDK
 
-final class UICollectionViewReusableViewTests: XCTestCase {
+@MainActor final class UICollectionViewReusableViewTests: XCTestCase, @unchecked Sendable {
 
     let viewController = UIViewController()
     var collectionView: UICollectionView!
@@ -17,17 +17,19 @@ final class UICollectionViewReusableViewTests: XCTestCase {
     override func setUp() {
         super.setUp()
 
-        let flowLayout = UICollectionViewFlowLayout()
-        flowLayout.itemSize = CGSize(width: 200, height: 300.0)
-
-        collectionView = UICollectionView(frame: viewController.view.frame,
-                                          collectionViewLayout: flowLayout)
-        collectionView.registerCell(cellClass: FakeCollectionViewCell.self)
-
-        viewController.view.addSubview(collectionView)
+        MainActor.assumeIsolated {
+            let flowLayout = UICollectionViewFlowLayout()
+            flowLayout.itemSize = CGSize(width: 200, height: 300.0)
+            
+            collectionView = UICollectionView(frame: viewController.view.frame,
+                                              collectionViewLayout: flowLayout)
+            collectionView.registerCell(cellClass: FakeCollectionViewCell.self)
+            
+            viewController.view.addSubview(collectionView)
+        }
     }
 
-    func testCollectionViewDequeueReusableCell() {
+    @MainActor func testCollectionViewDequeueReusableCell() {
         _ = viewController.view
 
         let dataSource = FakeCollectionViewDataSource()
@@ -41,7 +43,7 @@ final class UICollectionViewReusableViewTests: XCTestCase {
 
 }
 
-final class FakeCollectionViewCell: UICollectionViewCell {
+final class FakeCollectionViewCell: UICollectionViewCell, ReusableView {
     var rowNumber: Int = 0
 }
 

@@ -9,7 +9,7 @@
 import XCTest
 @testable import HibbettSDK
 
-final class UITabBarControllerLayoutTests: XCTestCase {
+@MainActor final class UITabBarControllerLayoutTests: XCTestCase {
 
     func testTabBarControllerBarHeight() {
         let tabBarController = UITabBarController()

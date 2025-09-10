@@ -12,8 +12,10 @@ import XCTest
 final class UINavigationControllerLayoutTests: XCTestCase {
 
     func testNavigationControllerBarHeight() {
-        let navigationController = UINavigationController()
-        XCTAssertEqual(navigationController.navigationBarHeight, navigationController.navigationBar.frame.height)
+        MainActor.assumeIsolated {
+            let navigationController = UINavigationController()
+            XCTAssertEqual(navigationController.navigationBarHeight, navigationController.navigationBar.frame.height)
+        }
     }
 
 }

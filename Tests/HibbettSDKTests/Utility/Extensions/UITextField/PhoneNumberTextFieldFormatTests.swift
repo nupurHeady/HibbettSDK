@@ -9,7 +9,7 @@
 import XCTest
 @testable import HibbettSDK
 
-final class PhoneNumberTextFieldFormatTests: XCTestCase {
+@MainActor final class PhoneNumberTextFieldFormatTests: XCTestCase {
 
     let textField = UITextField()
     let textFieldHandler = FakeTextFieldDelegateHandler()
@@ -60,7 +60,7 @@ final class PhoneNumberTextFieldFormatTests: XCTestCase {
         XCTAssertEqual(textField.text, expectedPhoneNumber)
     }
 
-    func testPhoneNumberFormat_whenPhoneNumberIsIncompleteButStillValid_andFirstFormattingPartHasStarted() {
+    @MainActor func testPhoneNumberFormat_whenPhoneNumberIsIncompleteButStillValid_andFirstFormattingPartHasStarted() {
         // Given
         let phoneNumber = "123"
         textField.text = phoneNumber

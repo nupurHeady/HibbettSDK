@@ -11,8 +11,9 @@ import XCTest
 
 final class UIApplicationLayoutTests: XCTestCase {
 
-    func testUIApplicationStatusBarHeight() {
-        let statusBarHeight = UIApplication.shared.statusBarFrame.height
+    @MainActor func testUIApplicationStatusBarHeight() {
+        let window = UIApplication.shared.windows.filter {$0.isKeyWindow}.first
+        let statusBarHeight = window?.windowScene?.statusBarManager?.statusBarFrame.height ?? 0.0
         XCTAssertEqual(statusBarHeight, UIApplication.statusBarHeight)
     }
 

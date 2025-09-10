@@ -9,7 +9,7 @@
 import XCTest
 @testable import HibbettSDK
 
-final class UITableViewReusableViewTests: XCTestCase {
+@MainActor final class UITableViewReusableViewTests: XCTestCase, @unchecked Sendable {
 
     let viewController = UIViewController()
     var tableView: UITableView!
@@ -17,8 +17,10 @@ final class UITableViewReusableViewTests: XCTestCase {
     override func setUp() {
         super.setUp()
 
-        tableView = UITableView(frame: viewController.view.frame)
-        tableView.registerCell(cellClass: FakeTableViewCell.self)
+        MainActor.assumeIsolated {
+            tableView = UITableView(frame: viewController.view.frame)
+            tableView.registerCell(cellClass: FakeTableViewCell.self)
+        }
     }
 
     func testTableViewDequeueReusableCell_whenUsingDequeueWithIndexPath() {
@@ -47,7 +49,7 @@ final class UITableViewReusableViewTests: XCTestCase {
 
 }
 
-final class FakeTableViewCell: UITableViewCell {
+final class FakeTableViewCell: UITableViewCell, ReusableView {
     var rowNumber: Int = 0
 }
 
